@@ -1,0 +1,12 @@
+├─ controllers
+│  └─ employee.controller.js
+├─ middlewares
+│  └─ index.js
+├─ models
+│  └─ employee.model.js
+├─ services
+│  ├─ employee.service.js
+│  └─ index.js
+├─ db.js
+└─ index.js
+

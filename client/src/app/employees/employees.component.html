@@ -1,0 +1,32 @@
+<div class="text-bg-dark text-center rounded-bottom py-4">
+    <h1 class="display-4">
+        Employee Register
+    </h1>
+</div>
+<div class="p-4">
+    <div class="row">
+        <div class="col-md-6">
+            <app-employee-form></app-employee-form>
+        </div>
+        <div class="col-md-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let emp of service.list">
+                        <td (click)="populateForm(emp)">{{emp.fullName}}</td>
+                        <td (click)="populateForm(emp)">{{emp.position}}</td>
+                        <td>
+                            <i class="far fa-trash-alt fa-lg text-secondary" (click)="onDelete(emp._id)"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
